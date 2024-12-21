@@ -25,30 +25,6 @@ DB_NAME=<nom_de_votre_base_de_données>
 DB_USER=<utilisateur_de_votre_base_de_données>
 DB_PASSWORD=<mot_de_passe_de_votre_base_de_données>
 
-## Structure du Projet
-
-Voici la structure générale du projet :
-
-.
-.
-├── Datalake/                   # Mise en place de notre "DLK"
-│   ├── input/                  # Dossier contenant les données d'entrée
-│   ├── output/                 # Dossier contenant les données transformées
-├── scripts/                    # Scripts ETL
-│   ├── etl_demographie.py      # Script ETL pour la démographie
-│   ├── etl_air.py              # Script ETL pour la qualité de l'air
-│   ├── etl_station.py          # Script ETL pour les stations
-│   └── etl_transport.py        # Script ETL pour les transports
-├── bdd_table_script/           # Scripts SQL pour la gestion des tables (création, vidage, insertion)
-│   ├── create_table.py         # Script pour créer les tables dans la base de données
-│   ├── truncate_table.py       # Script pour vider les tables avant chaque exécution
-│   └── insert_fact_table.py    # Script pour insérer des données dans les tables de faits
-├── tests/                      # Répertoire des tests
-│   └── test_create_tables.py   # Tests pour vérifier la création des tables
-├── .env                        # Fichier contenant les variables d'environnement
-├── requirements.txt            # Liste des dépendances du projet
-└── README.md                   # Documentation du projet
-
 ## Exécution du Pipeline ETL
 
 Ce projet automatise l'exécution des processus ETL (Extraction, Transformation, et Chargement) dans une base de données PostgreSQL. Voici comment l'exécuter.
