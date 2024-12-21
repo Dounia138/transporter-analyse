@@ -62,7 +62,7 @@ SELECT
 	c.id_date,
 	a.code_site,
 	b.id_pollution,
-	valeur_brute,
+	cast(valeur_brute as float) as valeur_brute,
 	code_unite_mesure
 FROM stg_air a
 LEFT JOIN dim_pollution b 
