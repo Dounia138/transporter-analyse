@@ -16,9 +16,9 @@ Clonez le projet et installez les dépendances nécessaires avec la commande sui
 git clone 'https://github.com/Dounia138/transporter-analyse'
 cd transporter-analyse
 pip install -r requirements.txt
+ˋˋˋ
 
-Le fichier requirements.txt contient toutes les bibliothèques nécessaires pour le bon fonctionnement du projet, y compris pytest pour les tests.
-Variables d'Environnement
+##Variables d'Environnement
 
 Ce projet utilise un fichier .env pour stocker les informations sensibles telles que les paramètres de connexion à la base de données. Assurez-vous d'avoir ce fichier à la racine du projet avec les variables suivantes :
 
@@ -27,7 +27,7 @@ DB_NAME=<nom_de_votre_base_de_données>
 DB_USER=<utilisateur_de_votre_base_de_données>
 DB_PASSWORD=<mot_de_passe_de_votre_base_de_données>
 
-Structure du Projet
+## Structure du Projet
 
 Voici la structure générale du projet :
 
@@ -50,10 +50,11 @@ Voici la structure générale du projet :
 ├── requirements.txt            # Liste des dépendances du projet
 └── README.md                   # Documentation du projet
 
-Exécution du Pipeline ETL
+## Exécution du Pipeline ETL
 
 Ce projet automatise l'exécution des processus ETL (Extraction, Transformation, et Chargement) dans une base de données PostgreSQL. Voici comment l'exécuter.
-1. Configuration de l'Environnement
+
+## Configuration de l'Environnement
 
 Avant d'exécuter les scripts, configurez votre environnement en renseignant les informations de votre base de données dans le fichier .env à la racine du projet. Par exemple :
 
@@ -62,7 +63,7 @@ DB_NAME=my_database
 DB_USER=my_user
 DB_PASSWORD=my_password
 
-2. Exécution des Scripts ETL
+## Exécution des Scripts ETL
 
 Une fois les dépendances installées et le fichier .env configuré, vous pouvez exécuter le pipeline ETL avec la commande suivante :
 
@@ -80,7 +81,7 @@ Cela effectuera les actions suivantes :
     Vider les tables : Avant l'exécution des ETL, les tables dans la base de données seront vidées pour éviter les doublons.
     Exécution des scripts ETL : Tous les scripts ETL seront exécutés dans l'ordre, et les données seront transformées et insérées dans la base de données PostgreSQL.
 
-3. Exécution des Tests
+## Exécution des Tests
 
 Les tests pour vérifier le bon fonctionnement du projet sont réalisés à l'aide de pytest. Pour exécuter les tests, vous pouvez utiliser la commande suivante :
 
@@ -88,7 +89,7 @@ pytest
 
 Cela exécutera tous les tests présents dans le répertoire tests/ et vous donnera un rapport détaillé sur les résultats. Si tous les tests passent, cela signifie que les scripts ETL et les fonctions associées fonctionnent correctement.
 
-4. Structure du Code
+# Structure du Code
 
 Voici un aperçu des principales fonctions dans le projet :
 
