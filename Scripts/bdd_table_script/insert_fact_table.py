@@ -10,11 +10,13 @@ DB_USER = os.getenv("DB_USER")
 DB_PASSWORD = os.getenv("DB_PASSWORD")
 
 
-connection = psycopg2.connect(host=DB_HOST, dbname=DB_NAME, user=DB_USER, password=DB_PASSWORD)
+connection = psycopg2.connect(
+    host=DB_HOST, dbname=DB_NAME, user=DB_USER, password=DB_PASSWORD
+)
 
 cursor = connection.cursor()
 
-insert_tables_sql ="""
+insert_tables_sql = """
 -- INSERT DIM_STATION --
 INSERT INTO dim_station 
 SELECT
